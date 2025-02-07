@@ -1,6 +1,6 @@
 substitutions:
   name: esp-powermeter
-  external_components_source: github://syssi/esphome-jk-bms@main
+  external_components_source: github://MatthiasN73/esphome-powermeter@main
 
 esphome:
   name: ${name}
