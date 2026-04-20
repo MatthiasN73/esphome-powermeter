@@ -2,23 +2,23 @@
 #include "esp-powermeter-component.h"
 
 namespace esphome {
-namespace powermeter {
+namespace esp-powermeter {
 
 static const char *TAG = "empty_component.component";
 
 
-void PowermeterComponent::setup() {
+void EspPowermeterComponent::setup() {
     ESP_LOGCONFIG(TAG, "Empty component setup");
 }
 
-void PowermeterComponent::update() {
+void EspPowermeterComponent::update() {
     ESP_LOGCONFIG(TAG, "Empty component update");
 }
 
-void PowermeterComponent::dump_config(){
+void EspPowermeterComponent::dump_config(){
     ESP_LOGCONFIG(TAG, "Empty component");
 }
 
 
-}  // namespace powermeter
+}  // namespace esp-powermeter
 }  // namespace esphome

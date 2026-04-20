@@ -7,12 +7,12 @@ AUTO_LOAD = ["binary_sensor", "sensor", "text_sensor"]
 DEPENDENCIES = ["uart"]
 
 
-powermeter_ns = cg.esphome_ns.namespace("powermeter")
-PowermeterComponent = powermeter_ns.class_("PowermeterComponent", uart.UARTDevice, cg.Component)
+esp-powermeter_ns = cg.esphome_ns.namespace("esp-powermeter")
+EspPowermeterComponent = powermeter_ns.class_("EspPowermeterComponent", uart.UARTDevice, cg.Component)
 
 CONFIG_SCHEMA = cv.Schema(
     {
-        cv.GenerateID(): cv.declare_id(PowermeterComponent),
+        cv.GenerateID(): cv.declare_id(EspPowermeterComponent),
     }
 ).extend(cv.COMPONENT_SCHEMA)
 
