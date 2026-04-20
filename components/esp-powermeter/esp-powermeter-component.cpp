@@ -8,11 +8,11 @@ static const char *TAG = "empty_component.component";
 
 
 void EspPowermeterComponent::setup() {
-
+    ESP_LOGCONFIG(TAG, "Empty component setup");
 }
 
 void EspPowermeterComponent::update() {
-
+    ESP_LOGCONFIG(TAG, "Empty component update");
 }
 
 void EspPowermeterComponent::dump_config(){

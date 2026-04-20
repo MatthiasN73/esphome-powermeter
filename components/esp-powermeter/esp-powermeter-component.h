@@ -1,13 +1,13 @@
 #pragma once
 
 #include "esphome/core/component.h"
+#include "esphome/components/uart/uart.h"
 
 namespace esphome {
 namespace esp-powermeter {
 
-class EspPowermeterComponent : public PollingComponent {
+class EspPowermeterComponent : public uart::UARTDevice public Component {
  public:
-  EspPowermeterComponent() : PollingComponent(15000) {}
   void setup() override;
   void update() override;
   void dump_config() override;
