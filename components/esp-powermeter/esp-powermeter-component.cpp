@@ -6,11 +6,12 @@ namespace esp-powermeter {
 
 static const char *TAG = "empty_component.component";
 
+
 void EspPowermeterComponent::setup() {
 
 }
 
-void EspPowermeterComponent::loop() {
+void EspPowermeterComponent::update() {
 
 }
 

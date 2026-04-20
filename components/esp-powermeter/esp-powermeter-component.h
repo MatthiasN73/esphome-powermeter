@@ -5,10 +5,11 @@
 namespace esphome {
 namespace esp-powermeter {
 
-class EspPowermeterComponent : public Component {
+class EspPowermeterComponent : public PollingComponent {
  public:
+  EspPowermeterComponent() : PollingComponent(15000) {}
   void setup() override;
-  void loop() override;
+  void update() override;
   void dump_config() override;
 };
 
