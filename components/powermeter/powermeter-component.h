@@ -10,13 +10,19 @@ namespace esphome {
 namespace powermeter {
 
 class PowermeterComponent : public uart::UARTDevice, public Component {
- public:
-  void setup() override;
-  void dump_config() override;
-  void loop() override;
+  public:
+    void set_throttle(uint32_t throttle) { this->throttle_ = throttle; }
 
-  float get_setup_priority() const override { return setup_priority::DATA; }
+    void setup() override;
+    void dump_config() override;
+    void loop() override;
 
+    float get_setup_priority() const override { return setup_priority::DATA; }
+ 
+  private:
+    uint32_t last_transmission_{0};
+    uint32_t last_publish_{0};
+    uint32_t throttle_{0};
 };
 
 
