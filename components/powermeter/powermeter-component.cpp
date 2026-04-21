@@ -11,14 +11,13 @@ void PowermeterComponent::setup() {
     ESP_LOGCONFIG(TAG, "Empty component setup");
 }
 
-void PowermeterComponent::update() {
-    ESP_LOGCONFIG(TAG, "Empty component update");
-}
-
 void PowermeterComponent::dump_config(){
-    ESP_LOGCONFIG(TAG, "Empty component");
+    ESP_LOGCONFIG(TAG, "Empty component dump_config");
 }
 
+
+void PowermeterComponent::loop() {
+}
 
 }  // namespace powermeter
 }  // namespace esphome

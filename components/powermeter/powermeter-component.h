@@ -12,8 +12,11 @@ namespace powermeter {
 class PowermeterComponent : public uart::UARTDevice, public Component {
  public:
   void setup() override;
-  void update() override;
   void dump_config() override;
+  void loop() override;
+
+  float get_setup_priority() const override { return setup_priority::DATA; }
+
 };
 
 
