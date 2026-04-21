@@ -7,9 +7,9 @@
 #include "esphome/components/uart/uart.h"
 
 namespace esphome {
-namespace esp-powermeter {
+namespace powermeter {
 
-class EspPowermeterComponent : public uart::UARTDevice, public Component {
+class PowermeterComponent : public uart::UARTDevice, public Component {
  public:
   void setup() override;
   void update() override;
@@ -17,5 +17,5 @@ class EspPowermeterComponent : public uart::UARTDevice, public Component {
 };
 
 
-}  // namespace esp-powermeter
+}  // namespace powermeter
 }  // namespace esphome

@@ -1,24 +1,24 @@
 #include "esphome/core/log.h"
-#include "esp-powermeter-component.h"
+#include "powermeter-component.h"
 
 namespace esphome {
-namespace esp-powermeter {
+namespace powermeter {
 
 static const char *TAG = "empty_component.component";
 
 
-void EspPowermeterComponent::setup() {
+void PowermeterComponent::setup() {
     ESP_LOGCONFIG(TAG, "Empty component setup");
 }
 
-void EspPowermeterComponent::update() {
+void PowermeterComponent::update() {
     ESP_LOGCONFIG(TAG, "Empty component update");
 }
 
-void EspPowermeterComponent::dump_config(){
+void PowermeterComponent::dump_config(){
     ESP_LOGCONFIG(TAG, "Empty component");
 }
 
 
-}  // namespace esp-powermeter
+}  // namespace powermeter
 }  // namespace esphome

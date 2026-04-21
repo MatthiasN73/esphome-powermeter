@@ -11,21 +11,21 @@ CODEOWNERS = ["@MN"]
 
 MULTI_CONF = True
 
-esp-powermeter_ns = cg.esphome_ns.namespace("esp-powermeter")
-EspPowermeterComponent = powermeter_ns.class_("EspPowermeterComponent", uart.UARTDevice, cg.Component)
+powermeter_ns = cg.esphome_ns.namespace("powermeter")
+PowermeterComponent = powermeter_ns.class_("PowermeterComponent", uart.UARTDevice, cg.Component)
 
 
 CONF_POWERMETER_ID = "powermeter_id"
 
 POWERMETER_COMPONENT_SCHEMA = cv.Schema(
     {
-        cv.GenerateID(CONF_POWERMETER_ID): cv.use_id(EspPowermeterComponent),
+        cv.GenerateID(CONF_POWERMETER_ID): cv.use_id(PowermeterComponent),
     }
 )
 
 CONFIG_SCHEMA = uart.UART_DEVICE_SCHEMA.extend(
     {
-        cv.GenerateID(): cv.declare_id(EspPowermeterComponent),
+        cv.GenerateID(): cv.declare_id(PowermeterComponent),
         cv.Optional(CONF_THROTTLE, default="1s"): cv.positive_time_period_milliseconds,
     }
 )
